@@ -1,0 +1,54 @@
+\documentclass[11pt, oneside]{book}
+
+% URLs and hyperlinks ---------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+}
+\usepackage{xurl}
+%---------------------------------------------------
+
+% titlepage -------------------------------------------------
+\usepackage{pdfpages}
+%------------------------------------------------------------
+
+\usepackage{xepersian}
+\settextfont{Yas}
+\setdigitfont{Yas}
+
+\begin{document}
+\frontmatter
+    \begin{titlepage}
+        \centering
+        \includegraphics[width=4cm, height=4cm]{./images/logo}\par
+        \vspace{2mm}            دانشگاه اصفهان \par
+            دانشکده مهندسی کامپیوتر \par
+        
+        \vspace{1cm}
+        {\huge \lr{\textbf{Amazon Analytics}}\par}
+        \vspace{3cm}
+        {\small\itshape                مهدی حق‌وردی\\
+                سید محمدحسین هاشمی \par}
+        
+        \vfill \par	\vfill
+        
+        \vfill            استاد راهنما:‌ دکتر محمدرضا شعرباف \par
+            دستیار استاد:‌ آقای رضا پورمحمدی
+        \vfill
+        
+        % Bottom of the page
+        {\large مهر ۱۴۰۲\par}
+\end{titlepage}
+\tableofcontents
+\mainmatter
+
+\chapter{معرفی}
+\chapter{مدل تجاری \lr{(Business Case)}}
+\section{جدول \lr{RACI}}
+\section{ماتریس تصمیم‌گیری راهبری}
+\chapter{پیاده‌سازی نسخه‌ی دمو}
+\chapter{قالب \lr{Brainstorming}}
+\end{document}
