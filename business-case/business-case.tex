@@ -20,6 +20,8 @@
 \usepackage{adjustbox}
 % -----------------------------------------------------------
 
+\newenvironment{enum}{}{}
+
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
@@ -50,14 +52,18 @@
 در همه شرکت‌ها برای مشاهده عملکرد کارکنان سازوکارها یا آماری دقیقی وجود دارد که به مدیران گزارشات دقیقی از عملکرد جزئی و کلی کارمندان آن شرکت می‌دهند،‌ و مدیران با استفاده از تحلیل و بررسی این آمار‌ها حقوق، پاداش و حتی برخی نیازهای کارمندان را مورد بررسی قرار می‌دهند و عملکرد کلی شرکت را بهبود می‌بخشند. 
 
 در شرکت‌های کوچک و استارت‌آپ‌ها به دلیل وسعت کاری کم و تعداد پایین کارکنان، این ارزیابی‌ها به طور مستقیم توسط مدیران انجام می‌شود، ولی در شرکت‌هایی مانند \lr{Amazon} به دلیل وسعت جهانی شرکت و همچنین تعداد بسیار زیاد کارمندان چنین امکانی وجود ندارد؛ علاوه بر این، در موقعیت کنونی شرکت \lr{Amazon} هیچ راه‌حل خوبی برای حل این مشکل ارائه نشده و ارائه‌ی یک راه‌حل خوب یکی از نیاز‌های اساسی این شرکت است؛ که در این سند به بررسی راه‌حل‌ها \lr{(Solutions)} و جایگزین‌هایی برای حل این مشکل می‌پردازیم.
-
-در سیستم \lr{Amazon Analytics} شرکت \lr{Amazon} به سه بخش اصلی (و درختی) تقسیم می‌شود:
+\subsection{ساختار شرکت}\label{amz-struct}
+در سیستم \lr{Amazon Analytics} شرکت \lr{Amazon} در تصویر \ref{amz-s3} به سه بخش اصلی (و درختی) تقسیم می‌شود.
+\begin{figure}[b]
 \begin{center}
-    \includegraphics[width=0.75\textwidth, height=10cm]{../images/amazon-s3-comp(2)}
-\end{center}
+    \includegraphics[width=\textwidth, height=\textheight]{../images/amazon-s3-comp(2)}
+\end{center} 
+\caption{ساختار کلی شرکت \lr{Amazon}}\label{amz-s3}
+\end{figure}
 
-که با توجه به این تقسیم‌بندی، ارزش‌های قابل‌ اندازه‌گیری \label{movs}
-و مهم برای شرکت \lr{Amozon} به شرح زیر می‌باشد:
+\subsection{ارزش‌های قابل‌ اندازه‌گیری}\label{intro-movs}
+با توجه به این تقسیم‌بندی انجام شده در \ref{amz-struct}، ارزش‌های قابل‌ اندازه‌گیری \label{movs}
+و مهم برای شرکت \lr{Amazon} به شرح زیر می‌باشد:
 
 \begin{itemize}
     \item  انبارداری \lr{(Stock)}
@@ -198,7 +204,14 @@
 \item         
 متریک‌های مورد استفاده
 
-تمامی این متریک‌ها در \ref{movs} تعریف شده‌اند.
+تمامی این متریک‌ها در \ref{intro-movs} و در تصویر \ref{amz-comp} تعریف شده‌اند.
+
+\begin{figure}[b]
+    \begin{center}
+        \includegraphics[width=\textheight, height=\textwidth, angle=90]{../images/amazon-comp(2)}
+    \end{center}
+\caption{ارزش‌ها و متریک‌های مهمِ \lr{Amazon Analytics}}\label{amz-comp}
+\end{figure}
 \end{itemize}
 
 \subsection{ارائه نتایج بررسی و مقایسه}
@@ -224,5 +237,4 @@
         \end{center}
     \end{latin}
 \end{table}
-
 \end{document}
