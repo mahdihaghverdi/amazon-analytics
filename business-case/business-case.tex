@@ -14,7 +14,7 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{float}
-\renewcommand{\arraystretch}{1.23}
+\renewcommand{\arraystretch}{1.40}
 
 % adjust a verrrrry big table -------------------------------
 \usepackage{adjustbox}
@@ -130,10 +130,10 @@
 \subsection{گزارشات کتبی \lr{(Written Reports)}}\label{written-report}
 در این راه‌حل هر کارمند در انتهای شیفت کاری، روز، ماه یا سال گزارشی از عملکرد خود یا بخشی که در آن کار می‌کند، به صورت کتبی به مدیر بخش ارائه می‌دهد. سپس مدیر بخش گزارشات دریافتی از کارمندان زیر دست خود را، جمع‌آوری، ارزیابی و تحلیل می‌کند و پس از آن عملکرد کلی بخش خود و زیردستان خود را به مدیران بالا دستی خود ارائه می‌دهد.
 همین روند تا مدیران ارشد شرکت و سهام‌داران ادامه پیدا می‌کند.
-\subsection{ارائه کتبی-دیجیتالی \lr{(Half Digital)}}\label{half-digital}
+\subsection{گزارشات دیجیتالی \lr{(Digital Reports)}}\label{half-digital}
 در این روش، ثبت گزارشات \underline{با دست ولی به صورت الکترونیکی} صورت می‌پذیرد.
 کارمندان گزارش عملکرد خود و بخش خود را به صورت دیجیتال به مدیران خود ارائه می‌دهند و به تبع آن، مدیران پس از تحلیل گزارشات دریافتی، نتایج آنها را هم به صورت دیجیتالی به مدیران ارشد و بالادستی خود ارائه می‌دهند.
-\subsection{ارزیابی دیجیتالی \lr{(Full Digital)}}\label{full-digital}
+\subsection{ارزیابی و تحلیل خودکار \lr{(Automated Reposts)}}\label{full-digital}
 در این روش، تمامی داده‌ها و آمار‌های کارمندان، بخش‌ها و مدیران شرکت، به علاوه‌ی بازخورد‌های کاربران به صورت کاملا دیجیتالی و بدون دخالت دست انسان، جمع‌آوری شده و سپس تمامی تحلیل‌ها و ارزیابی‌های آنها در سیستم \lr{Amazon Analytics} انجام شده و به صورت کاملا طبقه بندی شده به تمامی مدیران ارائه می‌گردد.
 
 \subsection{بررسی یک مثال با راه‌حل‌های مختلف}
@@ -222,21 +222,110 @@
     \begin{latin}
         \begin{center}
             \begin{adjustbox}{width=\textwidth}
-                \begin{tabular}{|M{4cm}|c|M{4cm}|c|}
+                \begin{tabular}{|M{4cm}|M{4cm}|M{4cm}|c|}
                     \hline
                     \multirow{2}{*}{Required Objectives}
                     & \multicolumn{3}{|c|}{Strategies} \\
                     \cline{2-4}
-                    & Written Reports (\ref{written-report}) & Half Digital (\ref{half-digital}) & Full Digital (\ref{full-digital}) \\
+                    & Written Reports (\ref{written-report}) & Digital Reposts (\ref{half-digital}) & Automated Reports (\ref{full-digital}) \\
                     \hline
                     \rl{دسترسی به عملکرد همه بخش‌ها توسط مدیران} & Yes, but hard & Yes  & Yes \\
                     \hline
-                    \rl{دریافت گزارش عملکرد در بازه‌های کوتاه مدت و یا آنی} &  No & Yes, but if user submits them quickly & Yes \\
+                    \rl{دسترسی به گزارشات قدیمی} & Yes, but hard & Yes & Yes \\
+                     \hline
+                    \rl{مصورسازی تحلیل‌ها} & Yes, but hard & Yes & Yes \\
                     \hline
-                    \rl{اعتبار ارزیابی} & No & No & Yes \\
+                    \rl{دقت در گزارشات} & Yes, but not guaranteed & Yes, but not guaranteed & Yes \\
+                    \hline
+                    \rl{گزارشات بهبود عملکرد} & Yes, but hard & Yes & Yes \\
+                    \hline
+                    \rl{اعتبار ارزیابی} & Yes, but low & Yes, but low & Yes \\
+                    \hline
+                     \rl{دریافت گزارش عملکرد در بازه‌های کوتاه مدت و یا آنی} &  No & Yes, but if user submits them quickly & Yes \\
                     \hline
                 \end{tabular}
             \end{adjustbox}
+        \end{center}
+    \end{latin}
+\end{table}
+
+\begin{table}[H]\caption{\lr{How likely is this strategy to meet the other objectives?}}
+    \begin{latin}
+        \begin{center}
+            \begin{adjustbox}{width=\textwidth}
+                \begin{tabular}{|M{5cm}|c|c|c|c|}
+                    \hline
+                    \multirow{2}{*}{Other objectives} &
+                    \multirow{2}{*}{Importance} &
+                    \multicolumn{3}{|c|}{Strategies}\\
+                    \cline{3-5}
+                    & & Written Reports & Digital Reports & Automated Reports  \\
+                    \hline
+                    \rl{دسترسی به گزارشات همه‌ی بخش‌ها}
+                    & 5
+                    & - 
+                    & 5
+                    & 5 \\
+                    \hline
+                    \rl{جستجو در گزارشات بایگانی شده}
+& 4
+& - 
+& 5
+& 5 \\
+\hline
+                    \rl{ارائه و مصورسازی عملکردها}
+& 3
+& - 
+& 3
+& 5 \\
+\hline
+                    \rl{دقت در داده‌های دریافتی}
+& 5
+& - 
+& 2
+& 5 \\
+\hline
+
+                              \rl{دسترسی لحظه‌ای به گزارشات و ارزیابی‌ها}
+  & 3
+  & - 
+  & 2
+  & 5 \\
+  \hline
+          
+                              \rl{هزینه‌، زمان و منابع صرف شده برای هر ارزیابی}
+& 2
+& - 
+& 2
+& 5 \\
+\hline
+                    \textbf{\rl{\textbf{مجموع}}} & & 0 & 74 & 110 \\
+                    \hline
+                \end{tabular}
+            \end{adjustbox}
+        \end{center}
+    \end{latin}
+\end{table}
+
+\subsection{ماتیس \lr{RACI}}
+\begin{table}[H]
+    \begin{latin}
+        \begin{center}
+            \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                Task/Person & Mahdi & Mohammad & Teacher & TA \\
+                \hline
+                \rl{بارش فکری} & - & - & I & I \\
+                \hline
+                 \rl{یافتن \lr{MOV}های شرکت} & - & - & C & I \\
+                \hline
+                 \rl{چینش چارت سازمانی} & - & - & I & I \\
+                \hline
+                 \rl{یافتن \lr{MOV}های پروژه} & - & - & C & I \\
+                  \hline
+                 \rl{تحلیل و بررسی جایگزین‌ها} & - & - & I & I \\
+                  \hline
+            \end{tabular}
         \end{center}
     \end{latin}
 \end{table}
