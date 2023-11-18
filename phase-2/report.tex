@@ -1,0 +1,44 @@
+\documentclass[11pt, oneside]{book}
+
+% URLs and hyperlinks ---------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\usepackage{xurl}
+%---------------------------------------------------
+
+% titlepage -------------------------------------------------
+\usepackage{pdfpages}
+%------------------------------------------------------------
+
+% tables -------------------------------------------------------
+\usepackage{float}
+\usepackage{multirow}
+\renewcommand{\arraystretch}{1.23}
+% ---------------------------------------------------------------------
+
+% commands --------------------------------------------
+\newcommand{\amz}{\lr{Amazon} }
+% -----------------------------------------------------------
+
+\usepackage{xepersian}
+\settextfont{Yas}
+\setdigitfont{Yas}
+
+\begin{document}
+\frontmatter
+\includepdf{../titlepage/title}
+\tableofcontents
+\mainmatter
+
+\chapter{ماتریس \lr{RACI}}
+\chapter{بخش ۲، تعریف پروژه\\\lr{(Project Definition)}}
+\chapter{بخش ۳.۳، نقش\\\lr{(Role)}}
+\chapter{بخش ۳.۴، مسئولیت‌ها\\\lr{(Responsibilities)}}
+\chapter{بخش ۵، ملاحظات پروژه\\\lr{(Project Considerations)}}
+\chapter{قالب \lr{Risk Assessment Matrix}}
+\end{document}
