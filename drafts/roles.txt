@@ -1,7 +1,7 @@
 role
 
 
-role         organization                resource Name                    Assignment Status             Assignment Date
+role-organization-resource Name-Assignment Status-Assignment Date
 
 sponcer      آقای فلانی        بخش فناوری و توسعه آمازون                                            Assignment                    1402/08/01
 
