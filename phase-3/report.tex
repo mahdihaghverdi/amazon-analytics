@@ -1,0 +1,35 @@
+\documentclass[11pt, oneside]{book}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{float}
+\renewcommand{\arraystretch}{1.23}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\newcounter{risks}
+\setcounter{risks}{1}
+\newcommand{\risk}{\arabic{risks}.\stepcounter{risks}}
+
+\usepackage{xepersian}
+\settextfont{Yas}
+\setdigitfont{Yas}
+
+\begin{document}
+\frontmatter
+\includepdf{../titlepage/title}
+\tableofcontents
+\mainmatter
+
+%\include{}
+\end{document}
