@@ -50,7 +50,6 @@
 \setlength{\parindent}{\savedparindent}
 \end{mdframed}
 }
-% ------------------------------------
 
 \newenvironment{wbssub}[2]{
 \def\arg{#2}
@@ -62,6 +61,14 @@
 \hrule height 0.2pt
 \vspace{5mm}
 }
+
+\newcommand{\wbspart}[1]{قسمت
+\ref{#1}\hspace{2mm}\nameref{#1}
+\vspace{2mm}
+\hrule height 0.6pt
+\vspace{5mm}}
+% ------------------------------------
+
 
 \usepackage{xepersian}
 \settextfont{Yas}
