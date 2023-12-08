@@ -19,10 +19,33 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
+% counters ---------------------------
 \newcounter{risks}
 \setcounter{risks}{1}
 \newcommand{\risk}{\arabic{risks}.\stepcounter{risks}}
+% ------------------------------------
+\newcounter{name}
+\newcounter{subname}[name]
+\newcounter{task}[subname]
+\newcommand{\name}{\stepcounter{name}\arabic{name}\hspace{3mm}}
+\newcommand{\subname}{\stepcounter{subname}\arabic{name}\lr{.}\arabic{subname}\hspace{3mm}}
+\newcommand{\task}{\stepcounter{task}\arabic{name}\lr{.}\arabic{subname}\lr{.}\arabic{task}\hspace{3mm}}
+% ------------------------------------
 
+% draw box ---------------------------
+\usepackage[linewidth=0.8pt]{mdframed}
+% ------------------------------------
+
+% environments
+\newenvironment{wbsbox}{
+\def\savedparindent{\the\parindent}
+\setlength{\parindent}{0pt}
+\begin{mdframed}
+}{
+\setlength{\parindent}{\savedparindent}
+\end{mdframed}
+}
+% ------------------------------------
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
