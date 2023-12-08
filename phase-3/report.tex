@@ -12,6 +12,7 @@
 \usepackage{tabularx}
 \usepackage{pdfpages}
 \usepackage{float}
+\usepackage{nameref}
 \usepackage[inline]{enumitem}
 
 \renewcommand{\arraystretch}{1.23}
@@ -28,7 +29,7 @@
 \newcounter{subname}[name]
 \newcounter{task}[subname]
 \newcommand{\name}{\stepcounter{name}\arabic{name}\hspace{3mm}}
-\newcommand{\subname}{\stepcounter{subname}\arabic{name}\lr{.}\arabic{subname}\hspace{3mm}}
+\newcommand{\subname}{\textbf{\stepcounter{subname}\arabic{name}\lr{.}\arabic{subname}}\hspace{3mm}}
 \newcommand{\task}{\stepcounter{task}\arabic{name}\lr{.}\arabic{subname}\lr{.}\arabic{task}\hspace{3mm}}
 % ------------------------------------
 
@@ -37,15 +38,31 @@
 % ------------------------------------
 
 % environments
-\newenvironment{wbsbox}{
+\newenvironment{wbsbox}[1]{
 \def\savedparindent{\the\parindent}
 \setlength{\parindent}{0pt}
 \begin{mdframed}
+\name {#1}
+\vspace{1.5mm}
+\hrule height 0.6pt
+\vspace{4mm}
 }{
 \setlength{\parindent}{\savedparindent}
 \end{mdframed}
 }
 % ------------------------------------
+
+\newenvironment{wbssub}[2]{
+\def\arg{#2}
+\subname #1 \\
+}{
+\\$\leftarrow$\hspace{3mm}\textbf{نقطه عطف}: 
+\arg
+\vspace{1mm}
+\hrule height 0.2pt
+\vspace{5mm}
+}
+
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
