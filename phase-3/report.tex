@@ -1,5 +1,6 @@
 \documentclass[11pt, oneside]{book}
 
+% general packages -----------------------------------------
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -7,7 +8,7 @@
     filecolor=magenta,      
     urlcolor=blue,
 }
-
+\usepackage{longtable}
 \usepackage{amsmath}
 \usepackage{adjustbox}
 \usepackage{tabularx}
@@ -15,17 +16,18 @@
 \usepackage{float}
 \usepackage{nameref}
 \usepackage[inline]{enumitem}
-
 \renewcommand{\arraystretch}{1.23}
-
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+% -----------------------------------------------------
 
 % counters ---------------------------
+% Risk counters
 \newcounter{risks}
 \setcounter{risks}{1}
 \newcommand{\risk}{\arabic{risks}.\stepcounter{risks}}
-% ------------------------------------
+
+% WBS counters
 \newcounter{name}
 \newcounter{subname}[name]
 \newcounter{task}[subname]
@@ -34,9 +36,7 @@
 \newcommand{\subname}{\textbf{\stepcounter{subname}\arabic{name}\lr{.}\arabic{subname}}\hspace{3mm}}
 \newcommand{\task}{\stepcounter{task}\arabic{name}\lr{.}\arabic{subname}\lr{.}\arabic{task}\hspace{3mm}}
 \newcommand{\tstep}{\stepcounter{tablestep}\arabic{tablestep}}
-% ------------------------------------
 
-% ----------------------------------------------
 % ILF easy
 \newcounter{ilfeasy}
 \newcommand{\silfeasy}{کم\stepcounter{ilfeasy}}
@@ -100,9 +100,8 @@
 \vspace{2mm}
 \hrule height 0.6pt
 \vspace{5mm}}
-% ------------------------------------
+% ----------------------------------------------------
 
-\usepackage{longtable}
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
