@@ -1,0 +1,199 @@
+\chapter{نقاط تابعی}
+در این فصل به بررسی تقریبی نقاط تابعی پروژه که از ساختار‌های شکست کار استخراج می‌شوند  میپردازیم. نقاط تابعی نوشته شده به صورت تقریبی بدست آمده‌اند؛ چون نمیتوان از الان برای مثال،‌ برای یک 
+\lr{RESTful API}
+تعداد فایل‌های 
+\lr{ILF}
+و یا 
+\lr{EIF}
+را به صورت دقیق مشخص کرد.
+\newpage
+\section{جدول نقاط تابعی}
+این جدول به ترتیب از روی ساختار‌های شکست کار در فصل 
+\ref{chap:wbs}
+نوشته شده‌اند.
+\begin{longtable}{|c|r|c|c|}
+\caption{جدول نقاط تابعی}\\
+\hline
+\textbf{ردیف} &
+\textbf{نام} &
+\textbf{نوع} &
+\textbf{سطح} \\
+\hline
+\hline
+\multicolumn{4}{|c|}{\ref{ssec:data-api-wbs}}\\
+\hline
+\tstep &
+\lr{OpenAPI Specification} &
+\lr{ILF} &
+پیچیده \\
+\hline
+\tstep &
+فایل‌های دایرکتوری 
+\lr{shared}& 
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل 
+\lr{models}& 
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های 
+\textit{\lr{repository pattern}}& 
+\lr{ILF}&
+سخت \\
+\hline
+\tstep &
+فایل‌های 
+\lr{services}&
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های 
+\lr{core}& 
+\lr{ILF}&
+سخت \\
+\hline
+\tstep &
+فایل‌های 
+\lr{API}&
+\lr{ILF} &
+متوسط \\
+\hline
+\tstep &
+\lr{Dockerfile}& 
+\lr{ILF}&
+متوسط\\
+\hline
+\tstep &
+فایل‌های 
+\lr{monitoring} و 
+توابع و کلاس‌های 
+\lr{integrate} 
+شده&
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+ارسال کنندگان اطلاعات &
+\lr{ILF}&
+کم \\
+\hline
+\tstep &
+داده‌های دریافتی از کدهای \lr{monitoring}&
+\lr{EI}&
+متوسط \\
+\hline
+\tstep &
+طراحی‌های فیگما &
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+صفحات \lr{front-end} &
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های 
+\lr{Prometheus}&
+\lr{ILF}&
+کم\\
+\hline
+\tstep &
+کد‌های سنسور‌‌های سری زمانی &
+\lr{EIF}&
+متوسط \\
+\hline
+\tstep &
+داده‌های دریافتی از سنسور‌های زمانی&
+\lr{EI}&
+کم \\
+\hline
+\tstep &
+کد‌های سنسور‌های جغرافیایی &
+\lr{EIF}&
+متوسط \\
+\hline
+\tstep &
+داده‌های دریافتی از سنسور‌های جغرافیایی&
+\lr{EI}&
+کم \\
+\hline
+\hline
+\multicolumn{4}{|c|}{\ref{ssec:process-api-wbs}} \\
+\hline
+\tstep &
+\lr{OpenAPI Specification}&
+\lr{ILF}&
+پیچیده \\
+\hline
+\tstep &
+فایل‌های دایرکتوری 
+\lr{shared}& 
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل 
+\lr{models}& 
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های 
+\textit{\lr{repository pattern}}& 
+\lr{ILF}&
+سخت \\
+\hline
+\tstep &
+فایل‌های 
+\lr{services}&
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های 
+\lr{core}& 
+\lr{ILF}&
+سخت \\
+\hline
+\tstep &
+فایل‌های 
+\lr{API}&
+\lr{ILF} &
+متوسط \\
+\hline
+\tstep &
+\lr{Dockerfile}& 
+\lr{ILF}&
+متوسط\\
+\hline
+\tstep &
+خروجی‌های این سرویس &
+\lr{EO}&
+پیچیده \\
+\hline
+\tstep &
+فایل‌های قسمت \lr{site}&
+\lr{ILF}&
+متوسط \\
+\hline
+\tstep &
+فایل‌های قسمت \lr{shipment}&
+\lr{ILF}&
+پیچیده \\
+\hline
+\hline
+\multicolumn{4}{|c|}{\ref{ssec:web-app-wbs}} \\
+\hline
+\tstep &
+&
+\lr{}&
+\\
+\hline
+\end{longtable}
+\section{جدول نقاط ناسازگار}
