@@ -1,6 +1,7 @@
 \chapter{تخمین زمان و تعداد نیروی کار}
 
-\section{نقاط تابعی تنظیم نشده \lr{(UAF)}}
+\section{نقاط تابعی}
+\subsection{نقاط تابعی تنظیم نشده \lr{(UAF)}}
 \begin{table}[H]
 \begin{center}
 \caption{نقاط تابعی تنظیم نشده \lr{(UAF)}}
@@ -46,3 +47,70 @@ $- \times 6 = -$&
 \end{adjustbox}
 \end{center}
 \end{table}
+
+\subsection{محاسبه‌ی فاکتور تطبیق مقدار}
+اگر مقدار مجموع درجات تاثیر 
+\lr{(TDI)}
+را برابر با ۴۰ بگیریم، پس مقدار 
+\lr{VAF}
+چنین می‌شود:
+\begin{equation}\label{vaf}
+\text{\lr{VAF}} = (40 \times 0.01) + 0.65 = 1.05
+\end{equation}
+
+\subsection{محاسبه‌ی نهایی نقاط تابعی}
+با داشتن مقدار 
+\lr{VAF} (\ref{vaf})
+میتوان مجموع نقاط تابعی تنظیم شده را محاسبه نمود:
+\begin{equation}
+\text{\lr{FP}} = 426 \times 1.05 = 447.3
+\end{equation}
+
+\subsection{تعداد خط کد مورد نیاز}
+تعداد خط کد مورد نیاز بر اساس این فرض که پروژه با زبان برنامه نویسی پایتون\RTLfootnote{\lr{Python (\url{python.org})}} نوشته می‌شود محاسبه شده‌ است.
+
+\begin{equation}\label{loc}
+\text{\lr{LOC (Python)}} = 48 \times 426 = 20448
+\end{equation}
+
+\section{مدل کوکومو}
+پروژه‌ی 
+\lr{Amazon Analytics}
+یک پروژه \textit{تعبیه شده} تعریف می‌شود.
+
+\subsection{تلاش \lr{(Effort)}}
+فرمول محاسبه‌ی تلاش:
+\begin{equation*}
+\text{\lr{Effort}} = 3 \times \text{\lr{KDSI}}^{1.12}
+\end{equation*}
+با توجه به 
+\ref{loc}
+مقدار 
+\lr{KDSI}
+برابر با $20.448$ می‌باشد.
+\begin{equation}\label{effort}
+\text{\lr{Effort}} = 3 \times \underbrace{(20.448)^{1.12}}_{29.37} = 88.11
+\end{equation}
+\subsection{مدت زمان \lr{(Duration)}}
+فرمول محاسبه‌ی مدت زمان:
+\begin{equation*}
+\text{\lr{Duration}} = 2.5 \times \text{\lr{Effort}}^{0.35}
+\end{equation*}
+و با توجه به 
+\ref{effort}
+مدت زمان برابر است با:
+\begin{equation}\label{duration}
+\text{\lr{Duration}} = 2.5 \times \underbrace{(88.11)^{0.35}}_{4.79} = 11.975 \ \ \text{ماه}
+\end{equation}
+\subsection{تعداد نفر مورد نیاز}
+فرمول محاسبه‌ی تعداد نفر مورد نیاز
+\begin{equation*}
+\text{\lr{People}} = \frac{\text{\lr{Effort}}}{\text{\lr{Duration}}}
+\end{equation*}
+و با توجه به 
+\ref{effort} و
+\ref{duration}
+تعداد افراد مورد نیاز برابر است با:
+\begin{equation}
+\text{\lr{People}} = \frac{88.11}{11.975} = 7.35
+\end{equation}
