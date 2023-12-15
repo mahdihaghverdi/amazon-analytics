@@ -35,6 +35,36 @@
 \newcommand{\tstep}{\stepcounter{tablestep}\arabic{tablestep}}
 % ------------------------------------
 
+% ----------------------------------------------
+% ILF easy
+\newcounter{ilfeasy}
+\newcommand{\silfeasy}{کم\stepcounter{ilfeasy}}
+
+% ILF normal
+\newcounter{ilfnormal}
+\newcommand{\silfnormal}{متوسط\stepcounter{ilfnormal}}
+
+% ILF hard
+\newcounter{ilfhard}
+\newcommand{\silfhard}{پیچیده\stepcounter{ilfhard}}
+
+% ELF normal
+\newcounter{eifnormal}
+\newcommand{\seifnormal}{متوسط\stepcounter{eifnormal}}
+
+% EI easy
+\newcounter{eieasy}
+\newcommand{\seieasy}{کم\stepcounter{eieasy}}
+
+% EI normal
+\newcounter{einormal}
+\newcommand{\seinormal}{متوسط\stepcounter{einormal}}
+
+% EO hard
+\newcounter{eohard}
+\newcommand{\seohard}{پیچیده\stepcounter{eohard}}
+% ----------------------------------------------------
+
 % draw box ---------------------------
 \usepackage[linewidth=0.8pt]{mdframed}
 % ------------------------------------
@@ -84,4 +114,5 @@
 
 \include{wbs.tex}
 \include{fp.tex}
+\include{time-estimate.tex}
 \end{document}
