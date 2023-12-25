@@ -9,6 +9,9 @@
 }
 \usepackage{xurl}
 
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{amsmath, amssymb}
 \usepackage[inline]{enumitem}
 \usepackage{pdfpages}
 \usepackage{nameref}
@@ -57,7 +60,73 @@
 نسخه‌ی دمو قرار است که بر اساس یک سری داده‌ی ذخیره شده، خروجی‌های مختلفی که در پروژه به آنها پرداخته شده بود، را نشان بدهد. در این بخش قسمت‌های مختلف را نام برده و به بررسی خروجی آنها می‌پردازیم.
 
 \subsection{بخش کاربران}\label{ssec:users}
+برای بخش کاربران (برای نسخه‌ی دمو) ما آمار برنامه‌نویسیانی که در شرکت آمازون کار می‌کنند را نشان می‌دهیم. فرض شده‌ است که، برنامه‌نویس‌ها هنگام ورود و خروج با کارت یا اثر انگشت، ورود و خروج خود را ثبت کرده‌اند. به علاوه، برنامه‌نویس، \lr{task}هایی که انجام داده‌ است را جایی ثبت کرده و تیک آنها را زده. از طرفی، \lr{task}ها خود سطح بندی‌های 
+\begin{enumerate*}
+\item 
+آسان،
+\item 
+متوسط و
+\item
+سخت
+\end{enumerate*}
+را دارند؛ که به ترتیب ضریب‌‌های $0.5$، ۱ و ۲ را دارند.
 
+متریکی که در این بخش‌ برای برنامه‌نویس‌ها انتخاب شده است، بدین‌گونه محاسبه می‌شود:
+\begin{equation}
+\frac{
+    (\text{تعداد تسک سخت} \times 2) 
+    + (\text{تعداد تسک متوسط} \times 1) 
+    + (\text{تعداد تسک آسان} \times 0.5)
+}{
+    \text{ساعات کاری (خروج \ensuremath{-} ورود)}
+}
+\end{equation}
+
+جدولی به مدیری که مشغول بررسی عملکرد این برنامه‌نویس نشان داده می‌شود، به این صورت است:
+\begin{table}[H]
+\begin{center}
+\caption{جدول \nameref{ssec:users}}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+نام &
+قسمت &
+تاریخ &
+ورود &
+آسان &
+متوسط &
+سخت &
+خروج &
+بهروی &
+پیشرفت \\
+\hline
+\hline
+مهدی حق‌وردی &
+توسعه‌ی \lr{AA} &
+\today &
+08:00 &
+3 &
+2 &
+4 &
+16:00 &
+$1.4375$ &
+$+0.3$ \\
+\hline
+حسین هاشمی &
+توسعه‌ی \lr{AA} &
+\today &
+09:00 &
+5 &
+4 &
+5 &
+18:00 &
+$1.83$ &
+$+0.6$ \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
+\end{table}
 \subsection{بخش \lr{Stock}}\label{ssec:stock}
 
 \subsection{بخش \lr{Site}}\label{ssec:site}
