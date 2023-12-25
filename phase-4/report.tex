@@ -199,14 +199,14 @@ $-0.56$ \\
 [
 ybar,
 title={\rl{میانگین زمان و بهروری}},
-symbolic x coords={14 June, 15 June, 16 June, 17 June},
+symbolic x coords={14 Jan, 15 Jan, 16 Jan, 17 Jan},
 legend pos = north west,
 axis y line=none,
 axis x line=bottom,
 nodes near coords,
 enlarge x limits=0.2] 
-\addplot+ coordinates {(14 June, 2) (15 June, 2.25) (16 June, 1.4) (17 June, 2.9)};
-\addplot+ coordinates {(14 June, 2.5) (15 June, 2.8125) (16 June, 1.75) (17 June, 3.625)};
+\addplot+ coordinates {(14 Jan, 2) (15 Jan, 2.25) (16 Jan, 1.4) (17 Jan, 2.9)};
+\addplot+ coordinates {(14 Jan, 2.5) (15 Jan, 2.8125) (16 Jan, 1.75) (17 Jan, 3.625)};
 \legend{\rl{میانگین زمان}, \rl{بهروری}};
 \end{axis}
 \end{tikzpicture}
@@ -225,8 +225,27 @@ enlarge x limits=0.2]
 \item 
 نمودار بازخورد‌های مشتریان
 \end{enumerate*}
-
 \subsubsection{نمودار \lr{Response time}}
+برای 
+\lr{Response time}
+هم یک نمودار روزانه تولید می‌شود.
+\begin{latin}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+[
+ybar,
+title={\rl{\lr{Response time} در دامنه‌ی \lr{UK}}},
+symbolic x coords={14Jan, 15 Jan, 16 Jan, 17 Jan, 18 Jan, 19 Jan},
+axis x line=bottom,
+nodes near coords,
+enlarge x limits=0.05] 
+\addplot+ coordinates {(14 Jan, 298) (15 Jan, 300) (16 Jan, 312) (17 Jan, 280) (18 Jan, 288) (19 Jan, 305)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{latin}
+
 \subsubsection{نمودار بازخورد‌های مشتریان}
 بازخورد‌های مشترین یک دامنه‌ی خاص\RTLfootnote{برای مثال دامنه‌ی مخصوص \lr{UK}} از سایت،‌ جمع‌آوری شده، و پس از تبدیل به عددی بین ۱ تا ۵، از همه‌ی آنها میانگین گرفته شده و به این شکل نشان داده می‌شوند:
 
@@ -238,7 +257,6 @@ enlarge x limits=0.2]
 ybar,
 title={\rl{بازخورد‌های مشتریان}},
 symbolic x coords={UK, India, US, Brazil},
-%axis y line=none,
 axis x line=bottom,
 nodes near coords,
 enlarge x limits=0.2] 
