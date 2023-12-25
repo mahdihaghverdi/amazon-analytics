@@ -19,6 +19,13 @@
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
+% bar chart
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usepgfplotslibrary{statistics}
+% ----------------------------------------
+
 \usepackage{xepersian}
 \settextfont{Yas}
 \setdigitfont{Yas}
@@ -182,9 +189,29 @@ $-0.56$ \\
 \end{center}
 \end{table}
 
+\newpage
 \subsubsection{نمودار}
 نموداری که در این بخش ارائه می‌شود، نمودار میانگین زمان پردازش هر کالا، در روز است. برای مثال:
-
+\begin{latin}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}
+[
+ybar,
+title={\rl{میانگین زمان و بهروری}},
+symbolic x coords={14 June, 15 June, 16 June, 17 June},
+legend pos = north west,
+axis y line=none,
+axis x line=bottom,
+nodes near coords,
+enlarge x limits=0.2] 
+\addplot+ coordinates {(14 June, 2) (15 June, 2.25) (16 June, 1.4) (17 June, 2.9)};
+\addplot+ coordinates {(14 June, 2.5) (15 June, 2.8125) (16 June, 1.75) (17 June, 3.625)};
+\legend{\rl{میانگین زمان}, \rl{بهروری}};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{latin}
 \subsection{بخش \lr{Site}}\label{ssec:site}
 
 \subsection{بخش \lr{Shipment}}\label{ssec:shipment}
