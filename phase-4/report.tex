@@ -55,12 +55,15 @@
 \end{mdframed}
 }
 
-\newenvironment{wbssub}[2]{
+\newenvironment{wbssub}[3]{
 \def\arg{#2}
+\def\est{#3}
 {\large \subname #1} \vspace{2.5mm}\\
 }{
 \\$\leftarrow$\hspace{3mm}\textbf{نقطه عطف}: 
 \arg
+\\$\leftarrow$\hspace{3mm}\textbf{زمان تخمینی}: 
+\est
 \vspace{1mm}
 \hrule height 0.2pt
 \vspace{5mm}
