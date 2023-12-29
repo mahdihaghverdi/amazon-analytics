@@ -8,6 +8,7 @@
     urlcolor=blue,
 }
 
+\usepackage{amsmath}
 \usepackage{adjustbox}
 \usepackage{tabularx}
 \usepackage{pdfpages}
@@ -60,6 +61,7 @@
 \section{بخش کاربران}
 \begin{table}[H]
 \begin{center}
+\caption{جدول داده‌های کاربران}
 \begin{adjustbox}{width=\textwidth}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -161,6 +163,7 @@ $-0.22$\\
 \subsection{جدول}
 \begin{table}[H]
 \begin{center}
+\caption{جدول داده‌های انبار‌ها}
 \begin{adjustbox}{width=\textwidth}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
@@ -236,16 +239,16 @@ $-0.43$ \\
 
 \subsection{داده‌های نمودار}
 \begin{table}[H]
-\caption{جدول داده‌های نمودار شهر بیرمنگهام}
 \begin{center}
+\caption{جدول داده‌های نمودار شهر بیرمنگهام}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-۱ دی ۱۴۰۲ &
-۲ دی ۱۴۰۲ &
-۳ دی ۱۴۰۲ &
-۴ دی ۱۴۰۲ &
-۵ دی ۱۴۰۲ &
-۶ دی ۱۴۰۲ \\
+۱ دی  &
+۲ دی  &
+۳ دی  &
+۴ دی  &
+۵ دی  &
+۶ دی  \\
 \hline
 \hline
 $2.9$ &
@@ -258,8 +261,41 @@ $4.5$ \\
 \end{tabular}
 \end{center}
 \end{table}
-\section{بخش \lr{Site}}
 
+\section{بخش \lr{Site}}
+\subsection{داده‌های نمودار \lr{Response time}}
+\begin{table}[H]
+\begin{center}
+\caption{جدول داده‌های نمودار \lr{Response time} برای دامنه‌ی \lr{UK}}
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+۱ دی  &
+۲ دی  &
+۳ دی  &
+۴ دی  &
+۵ دی  &
+۶ دی  &
+۷ دی  &
+۸ دی \\
+\hline
+\hline
+$281 \, \text{\lr{ms}}$ &
+$385 \, \text{\lr{ms}}$ &
+$295 \, \text{\lr{ms}}$ &
+$248 \, \text{\lr{ms}}$ &
+$259 \, \text{\lr{ms}}$ &
+$201 \, \text{\lr{ms}}$ &
+$324 \, \text{\lr{ms}}$ &
+$327 \, \text{\lr{ms}}$ \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{center}
+\end{table}
+
+\subsection{داده‌های نمودار بازخورد‌های مشتریان}
 \section{بخش \lr{Shipment}}
 
+\listoftables
 \end{document}
