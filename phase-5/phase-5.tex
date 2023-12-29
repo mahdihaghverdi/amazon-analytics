@@ -1,0 +1,54 @@
+\documentclass[11pt, oneside]{book}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage{adjustbox}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{float}
+\renewcommand{\arraystretch}{1.23}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\newcounter{risks}
+\setcounter{risks}{1}
+\newcommand{\risk}{\arabic{risks}.\stepcounter{risks}}
+
+\usepackage{xepersian}
+\settextfont{Yas}
+\setdigitfont{Yas}
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+    \centering
+    \includegraphics[width=2cm, height=2cm]{../images/logo}\par
+    \vspace{2mm}            دانشگاه اصفهان \par
+    دانشکده مهندسی کامپیوتر \par
+    
+    \vspace{1cm}
+    \includegraphics{../images/alogo} \par
+    \vspace{3cm}
+    {\small\itshape                مهدی حق‌وردی\\
+        سید محمدحسین هاشمی \par}
+    
+    \vfill \par	\vfill
+    
+    \vfill            استاد راهنما:‌ دکتر محمدرضا شعرباف \par
+    دستیار استاد:‌ آقای رضا پورمحمدی
+    \vfill
+    
+    % Bottom of the page
+    {\large \today}
+\end{titlepage}
+\tableofcontents
+\mainmatter
+
+\end{document}
